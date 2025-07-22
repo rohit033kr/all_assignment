@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="All HTML Tags Example Project"/>
+  <title>My Profile Page</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    header, footer { background-color: #f0f0f0; padding: 10px; }
+    nav a { margin: 0 10px; }
+    table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Semantic Header -->
+  <header>
+    <h1>🌟 Welcome to My Profile Page</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Section with Headings and Paragraphs -->
+  <section id="about">
+    <h2>👤 About Me</h2>
+    <p>Hello! I'm <strong>Rohit Kumar</strong>, a passionate web developer. I love building responsive and user-friendly websites.</p>
+    <p>I specialize in <em>HTML, CSS, TAILWIND, JavaScript,REACT,NODEJS,EXPRESS JS,MONGODB,</em>.</p>
+    <img src="https://via.placeholder.com/150" alt="My Photo" width="150" />
+  </section>
+
+  <!-- List Example -->
+  <section id="skills">
+    <h2>🛠️ My Skills</h2>
+    <h3>Technical Skills</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>TAILWIND</li>
+      <li>JavaScript</li>
+      <li>REACT</li>
+      <li>NODEJS</li>
+      <li>EXPRESS JS</li>
+      <li>MONGODB</li>
+    </ul>
+    <h3>Soft Skills</h3>
+    <ol>
+      <li>Communication</li>
+      <li>Teamwork</li>
+      <li>Time Management</li>
+    </ol>
+  </section>
+
+  <!-- Table Example -->
+  <section>
+    <h2>📅 Weekly Schedule</h2>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Activity</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Code Practice</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Project Work</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Form Example -->
+  <section id="contact">
+    <h2>📩 Contact Me</h2>
+    <form>
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" /><br /><br />
+
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4"></textarea><br /><br />
+
+      <input type="submit" value="Send" />
+    </form>
+  </section>
+
+  <!-- Multimedia: Audio and Video -->
+  <section>
+    <h2>🎵 Audio and 📹 Video</h2>
+    <audio controls>
+      <source src="example.mp3" type="audio/mpeg" />
+      Your browser does not support audio.
+    </audio><br /><br />
+
+    <video width="320" height="240" controls>
+      <source src="example.mp4" type="video/mp4" />
+      Your browser does not support video.
+    </video>
+  </section>
+
+  <!-- Iframe Example -->
+  <section>
+    <h2>📍 My Location (via Google Maps)</h2>
+    <iframe src=""
+            width="300" height="200" style="border:0;" allowfullscreen=""></iframe>
+  </section>
+
+  <!-- Semantic Footer -->
+  <footer>
+    <p>&copy; 2025 Rohit Kumar. All rights reserved.</p>
+    <address>Contact: rohit@example.com</address>
+  </footer>
+
+</body>
+</html>
