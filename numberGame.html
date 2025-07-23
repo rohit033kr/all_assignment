@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Number Guessing Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .game-container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    input[type="number"] {
+      width: 80%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Guess the Number!</h1>
+    <p>Guess a number between 1 and 10:</p>
+    <input type="number" id="guessInput" min="1" max="10" />
+    <br>
+    <button onclick="checkGuess()">Submit</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const secretNumber = Math.floor(Math.random() * 10) + 1;
+    let attempts = 3;
+
+    function checkGuess() {
+      const userGuess = parseInt(document.getElementById("guessInput").value);
+      const message = document.getElementById("message");
+
+      if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+        message.textContent = "⚠️ Please enter a valid number between 1 and 10.";
+        message.style.color = "#d9534f";
+        return;
+      }
+
+      if (userGuess === secretNumber) {
+        message.textContent = "🎉 Correct! You guessed the number!";
+        message.style.color = "#28a745";
+      } else {
+        attempts--;
+        if (attempts > 0) {
+          message.textContent = `❌ Wrong guess. Try again! Attempts left: ${attempts}`;
+          message.style.color = "#ffc107";
+        } else {
+          message.textContent = `💥 Game over! The number was ${secretNumber}.`;
+          message.style.color = "#dc3545";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
